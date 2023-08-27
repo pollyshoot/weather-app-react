@@ -4,9 +4,7 @@ import DisplayWeather from "./DisplayWeather";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Weather App</h1>
-
+    <div className="App container">
       <DisplayWeather city="Hannover" />
     </div>
   );

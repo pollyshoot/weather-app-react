@@ -21,9 +21,10 @@ export default function DisplayWeather(props) {
   }
 
   let form = (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form-box">
       <input type="search" placeholder="Type a city..." onChange={getCity} />
       <button type="submit">Search</button>
+      <button type="submit">Current City</button>
     </form>
   );
 
@@ -56,6 +57,11 @@ export default function DisplayWeather(props) {
       </div>
     );
   } else {
-    return <div>{form}</div>;
+    return (
+      <div>
+        {form}
+        <h3>Let's search for the weather somewhere!</h3>
+      </div>
+    );
   }
 }
