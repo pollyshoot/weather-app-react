@@ -11,13 +11,21 @@ ul {
 .container {
   max-width: 600px;
   margin: 30px auto;
+
+ 
+}
+
+.weather-app {
   padding: 30px;
   border: 1px solid black;
   border-radius: 4px;
 }
-
 .form-box {
   display: flex;
   gap: 10px;
   height: 30px;
+}
+
+.source-link {
+  margin-top: 10px;
 }
