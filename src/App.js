@@ -10,7 +10,7 @@ export default function App() {
           <DisplayWeather city="Hannover" />
         </div>
         <div className="source-link">
-          <a href="https://github.com/pollyshoot/weather-app-react">
+          <a href="https://github.com/pollyshoot/weather-app-react" target="_blank" rel="noreferrer">
             Open-source code
           </a>
           , by Polina Radahuz

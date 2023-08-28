@@ -24,7 +24,7 @@ export default function DisplayWeather(props) {
     <form onSubmit={handleSubmit} className="form-box">
       <input type="search" placeholder="Type a city..." onChange={getCity} />
       <button type="submit">Search</button>
-      <button type="submit">Current City</button>
+      {/* <button type="submit">Current City</button> */}
     </form>
   );
 
@@ -33,12 +33,18 @@ export default function DisplayWeather(props) {
     setCity(event.target.value);
   }
 
+  function error (error) {
+    console.log(error)
+    alert("Enter exicting city")
+  }
+
+
   function handleSubmit(event) {
     event.preventDefault();
 
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0479fec9478c6c9031d035f5c5efc126&units=metric`;
 
-    axios.get(url).then(showWeather);
+    axios.get(url).then(showWeather).catch(error);
   }
   if (loaded) {
     return (
